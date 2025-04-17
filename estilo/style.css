@@ -110,7 +110,7 @@ main img {
     display: block;
 }
 
-#noticias {
+#destaque {
     background-color: var(--cor3);
     color: var(--cor1);
     font-family: var(--fonte-padrao);
@@ -118,7 +118,7 @@ main img {
     border-radius: 5px;
 }
 
-#h2-noticias {
+#h2-destaque {
     color: var(--cor1);
     font-family: var(--fonte-titulo);
     text-align: center;
@@ -132,6 +132,7 @@ footer {
     text-align: center;
     bottom: 0;
     width: 100%;
+    border-radius: 5px;
 }
 
 footer a {
@@ -183,6 +184,43 @@ thead {
     text-align: center;
 }
 
+#cadlog {
+    background-color: var(--cor3);
+    color: var(--cor1);
+    font-family: var(--fonte-padrao);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#h2-cadlog {
+    color: var(--cor1);
+    font-family: var(--fonte-titulo);
+    text-align: center;
+}
+
+#cadbutt {
+    background-color: var(--cor2);
+    color: var(--cor3);
+    font-family: var(--fonte-titulo);
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#cadbutt:hover {
+    background-color: var(--cor1);
+    color: var(--cor3);
+    font-family: var(--fonte-titulo);
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
 button {
     background-color: var(--cor3);
     color: var(--cor1);
@@ -201,4 +239,10 @@ button:hover {
     border-radius: 5px;
     border: none;
     cursor: pointer;
+}
+
+legend {
+    font-family: var(--fonte-titulo);
+    padding: 10px;
+
 }

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>F1 2025 | Login</title>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+        <img src="img/f11.png" alt="Descrição da imagem">
+        </a>
+        <p>Seu portal atualizado do mundo da Fórmula 1.</p>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="classificacao.html">Classificação</a>
+            <a href="pil-equip.html">Pilotos e Equipes</a>
+            <a href="calendario.html">Calendário</a>
+            <a href="arquivo.html">Arquivo</a>
+        </nav>
+    </header>
+    <main>
+        <br>
+        <section>
+            <div id="cadlog">
+                <fieldset>
+                    <legend>Faça seu Login:</legend>
+                <form action="cadastro.php" method="post">
+                    <p>
+                        <label for="iusuario">Usuário:</label>
+                        <input type="text" id="iusuario" name="usuario" required autocomplete="nickname">
+                    </p>
+                    <p>
+                        <label for="isenha">Senha:</label>
+                        <input type="password" id="isenha" name="senha" required minlength="6" maxlength="12" autocomplete="password">
+                    </p>
+                    <p><button id="cadbutt" type="submit">Entrar</button>
+                        <button id="cadbutt" type="reset">Limpar</button></p>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+    </main>
+
+<br>
+<footer>
+    <p>Feito por <a href="https://github.com/DouglasTambasco" target="_blank">Douglas Tambasco</a> &copy;</p>
+    <p>2025</p>
+</footer>
+</body>
+</html>
