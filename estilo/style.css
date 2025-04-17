@@ -169,3 +169,36 @@ thead {
     font-family: var(--fonte-titulo);
 }
 
+#arquivo {
+    background-color: var(--cor3);
+    color: var(--cor1);
+    font-family: var(--fonte-padrao);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#h2-arquivo {
+    color: var(--cor1);
+    font-family: var(--fonte-titulo);
+    text-align: center;
+}
+
+button {
+    background-color: var(--cor3);
+    color: var(--cor1);
+    font-family: var(--fonte-titulo);
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--cor1);
+    color: var(--cor3);
+    font-family: var(--fonte-titulo);
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
