@@ -31,7 +31,19 @@ header {
     border-radius: 5px;
 }
 
-nav {
+#burguer {
+    color: var(--cor3);
+    display: block;
+    cursor: pointer;
+    text-align: center;
+}
+
+#burguer:hover {
+    color: var(--cor1);
+}
+
+menu {
+    display: none;
     background-color: var(--cor2);
     color: var(--cor3);
     font-family: var(--fonte-titulo);
@@ -39,7 +51,7 @@ nav {
     text-align: center;
 }
 
-nav > a {
+menu > a {
     color: var(--cor3);
     text-decoration: none;
     padding: 10px;
@@ -47,7 +59,7 @@ nav > a {
     font-weight: bold;
 }
 
-nav > a:hover {
+menu > a:hover {
     color: var(--cor1);
     text-decoration: underline;
     padding: 5px;
@@ -151,17 +163,49 @@ footer a {
     border-radius: 5px;
 }
 
-table {
+.tabelas-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que as tabelas quebrem para a próxima linha se necessário */
+}
+
+/* Mantém as cores e estilos originais */
+.tabela {
     border-collapse: collapse;
-    width: 100%;
+    width: 400px;
     background-color: var(--cor2);
     border: 7px solid var(--cor3);
 }
 
-td {
+.tabela td, .tabela th {
     padding: 10px;
     text-align: center;
     border: 1px solid var(--cor3);
+}
+
+thead {
+    background-color: var(--cor3);
+    color: var(--cor1);
+    font-family: var(--fonte-titulo);
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+    .tabelas-container {
+        flex-direction: column; /* Em telas pequenas, coloca uma tabela abaixo da outra */
+        align-items: center; /* Centraliza as tabelas */
+    }
+
+    .tabela {
+        width: 90%; /* Ajusta a largura para telas pequenas */
+    }
+}
+
+.tabela td, .tabela th {
+    padding: 10px;
+    text-align: center;
+    border: 2px solid var(--cor3);
 }
 
 thead {
@@ -246,3 +290,4 @@ legend {
     padding: 10px;
 
 }
+

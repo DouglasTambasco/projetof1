@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>F1 2025 | Início</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu"/>
     <link rel="stylesheet" href="estilo/style.css">
+    <link rel="stylesheet" href="estilo/medias.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
-<body>
+
+<body onresize="mudouTamanho()">
     <header>
         <a href="index.html">
         <img src="img/f11.png" alt="Descrição da imagem">
         </a>
         <p>Seu portal atualizado do mundo da Fórmula 1.</p>
-        <nav>
+        <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+        <menu id="menu">
             <a href="classificacao.html">Classificação</a>
             <a href="pil-equip.html">Pilotos e Equipes</a>
             <a href="calendario.html">Calendário</a>
             <a href="arquivo.html">Arquivo</a>
-        </nav>
+        </menu>
     </header>
 
     <main>
@@ -34,19 +38,34 @@
             <div id="destaque">
             <h2 id="h2-destaque">Último Grande Prêmio</h2>
             <article>
-                <h3>GP do Bahrein:</h3>
-                <p>Assim ficou o top 10 do GP do Bahrein:</p>
+                <h3>GP da Arábia Saudita:</h3>
+                <p>Assim ficou o top 10 do GP de Jeddah:</p>
                 <picture>
                     <source media="(max-width: 400px)" srcset="img/podio-pq.jpeg">
-                    <img src="img/podio-gra.jpeg" alt="podio-bahrein">
+                    <img src="img/ara25.jpeg" alt="podio-bahrein">
                 </picture>
 
-                <p>Confira os <a href="https://youtu.be/bFXLP487kXo?feature=shared" target="_blank">melhores momentos (YouTube F1 Oficial)</a> da corrida.</p>
+                <p>Confira os <a href="https://youtu.be/Li93iQDZQeg?feature=shared" target="_blank">melhores momentos (YouTube F1 Oficial)</a> da corrida.</p>
 
-                <p>Ultrapassagem do Max Verstappen na última volta ignorada pela transmissão oficial: </p>
-                <div class="video"><iframe width="450" height="300" src="https://www.youtube.com/embed/njdMrFHsYoI?si=sBjI2ubjKjRjIDvz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                <p>Aqui, um comparativo interessante das voltas das poles de Max Verstappen em Jeddah no ano passado e desse ano: </p>
+                <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/IPr46c71GoE?si=VFfiR49jhMFgIWIG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
             </div>
             </article>
+            <br>
+            <section>
+                <div id="destaque">
+                <h2 id="h2-destaque">NOVO LÍDER</h2>
+                <article>
+
+                    <p>Com esse resultado, temos um novo líder no campeonato de <a href="classificacao.html">pilotos</a>. Ele que nunca havia liderado o campeonato da Fórmula 1 antes, sai de Jeddah com 10 pontos na frente do seu companheiro de equipe, Lando Norris. Com isso, a McLaren sai mais lider do que nunca do mundial de <a href="classificacao.html"> construtores</a>.</p>
+
+                    <picture>
+                        <source media="(max-width: 400px)" srcset="img/podio-pq.jpeg">
+                        <img src="img/piastri.jpeg" alt="oscar-piastri">
+                    </picture>
+
+                </div>
+                </article>
 
             <article>
                 <h2>A GM/Cadillac vem aí...</h2>
@@ -59,6 +78,8 @@
             <p>Feito por <a href="https://github.com/DouglasTambasco" target="_blank">Douglas Tambasco</a> &copy;</p>
             <p>2025</p>
         </footer>
-    
+
+    <script src="script.js"></script>
+
 </body>
 </html>
