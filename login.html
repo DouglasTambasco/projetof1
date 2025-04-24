@@ -31,19 +31,24 @@
             <div id="cadlog">
                 <fieldset>
                     <legend>Faça seu Login:</legend>
-                <form action="cadastro.php" method="post">
-                    <p>
-                        <label for="iusuario">Usuário:</label>
-                        <input type="text" id="iusuario" name="usuario" required autocomplete="nickname">
-                    </p>
-                    <p>
-                        <label for="isenha">Senha:</label>
-                        <input type="password" id="isenha" name="senha" required minlength="6" maxlength="12" autocomplete="password">
-                    </p>
-                    <p><button id="cadbutt" type="submit">Entrar</button>
-                        <button id="cadbutt" type="reset">Limpar</button></p>
-                    </fieldset>
-                </form>
+                    <form action="cadastro.php" method="post">
+                        <div class="campo">
+                            <input type="text" id="iusuario" name="usuario" required autocomplete="nickname" placeholder=" ">
+                            <label for="iusuario">Usuário:</label>
+                        </div>
+                        <div class="campo">
+                            <input type="password" id="isenha" name="senha" required minlength="6" maxlength="12" autocomplete="password" placeholder=" ">
+                            <label for="isenha">Senha:</label>
+                        </div>
+                            <p>
+                            <button id="cadbutt" type="submit">Entrar</button>
+                            <button id="cadbutt"><a href="esqueci.html">Esqueci minha senha</a></button>
+                            </p>
+                            <p>
+                            <button id="cadbutt"><a href="cad.html">Cadastrar</a></button>
+                            </p>
+                    </form>
+                </fieldset>
             </div>
         </section>
     </main>

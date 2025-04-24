@@ -67,7 +67,7 @@ menu > a:hover {
 }
 
 header img {
-    max-width: 100%;
+    max-width: 40%;
     height: auto;
 }
 
@@ -100,6 +100,7 @@ main p {
     font-family: var(--fonte-padrao);
     text-align: justify;
     padding: 10px;
+    
 }
 
 main a {
@@ -115,7 +116,8 @@ main a:hover {
 }
 
 main img {
-    max-width: 100%;
+    max-width: 90%;
+    border-radius: 15px;
     height: auto;
     padding: auto;
     margin: auto;
@@ -228,18 +230,42 @@ thead {
     text-align: center;
 }
 
+/* Estilo atualizado para o formulário de cadastro */
 #cadlog {
+    max-width: 400px; /* Define uma largura máxima para o formulário */
+    margin: 20px auto; /* Centraliza o formulário na página */
+    padding: 20px;
+    border: 1px solid var(--cor2);
+    border-radius: 8px;
     background-color: var(--cor3);
     color: var(--cor1);
-    font-family: var(--fonte-padrao);
-    padding: 10px;
-    border-radius: 5px;
 }
 
-#h2-cadlog {
-    color: var(--cor1);
+#cadlog legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
     font-family: var(--fonte-titulo);
-    text-align: center;
+}
+
+#cadlog #campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px; /* Espaçamento entre os campos */
+}
+
+#cadlog label {
+    margin-bottom: 5px; /* Espaçamento entre o label e o input */
+    font-weight: bold;
+    font-family: var(--fonte-titulo);
+}
+
+#cadlog input {
+    padding: 10px;
+    border: 1px solid var(--cor2);
+    border-radius: 4px;
+    font-size: 1em;
+    font-family: var(--fonte-padrao);
 }
 
 #cadbutt {
@@ -265,29 +291,60 @@ thead {
     cursor: pointer;
 }
 
-button {
-    background-color: var(--cor3);
-    color: var(--cor1);
-    font-family: var(--fonte-titulo);
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
+#cadbutt a {
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: inherit; /* Herda a cor do botão */
+    display: inline-block; /* Garante que o link se comporte como um bloco dentro do botão */
+    width: 100%; /* Faz o link ocupar todo o espaço do botão */
+    height: 100%;
 }
 
-button:hover {
+/* Espaçamento e estilo dos campos */
+.campo {
+    position: relative;
+    margin-bottom: 25px; /* Aumenta o espaçamento entre os campos */
+}
+
+.campo input {
+    width: 100%; /* O campo ocupa toda a largura disponível */
+    padding: 10px; /* Aumenta o padding para melhorar o espaçamento interno */
+    padding-top: 25px; /* Espaço para o label */
+    border: 1px solid var(--cor3);
+    border-radius: 4px;
+    font-size: 0.9em; /* Reduz o tamanho da fonte */
+    font-family: var(--fonte-padrao);
     background-color: var(--cor1);
     color: var(--cor3);
-    font-family: var(--fonte-titulo);
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
+    box-sizing: border-box; /* Garante que o padding não afete a largura */
 }
 
-legend {
-    font-family: var(--fonte-titulo);
-    padding: 10px;
-
+.campo input:focus {
+    outline: none;
+    border-color: var(--cor3);
 }
 
+/* Ajuste do label */
+.campo label {
+    position: absolute;
+    top: 15px; /* Ajusta a posição inicial do label */
+    left: 10px;
+    font-size: 1em; /* Aumenta o tamanho do label */
+    color: var(--cor3); /* Cor inicial do texto */
+    transition: 0.3s ease-in-out;
+    pointer-events: none; /* Impede que o label interfira no clique */
+    font-family: var(--fonte-titulo);
+    background-color: transparent; /* Fundo transparente inicialmente */
+    padding: 0 5px; /* Espaçamento interno */
+}
+
+/* Quando o input está em foco ou preenchido */
+.campo input:focus + label,
+.campo input:not(:placeholder-shown) + label {
+    top: -12px; /* Ajusta a posição do label ao subir */
+    left: 10px;
+    font-size: 0.9em; /* Reduz o tamanho do label ao subir */
+    color: var(--cor3); /* Cor branca para o texto */
+    background-color: var(--cor2); /* Fundo vermelho (cor do card) */
+    padding: 0 5px; /* Espaçamento interno para o fundo */
+    border-radius: 4px; /* Bordas arredondadas para o label */
+}
