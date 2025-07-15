@@ -11,7 +11,11 @@ router.post('/register', (req, res) => {
 
     const sql = 'INSERT INTO usuarios (nome_completo, usuario, email, senha) VALUES (?, ?, ?, ?)';
     db.query(sql, [nome_completo, usuario, email, hash], (err, result) => {
-        if (err) return res.status(500).json({ erro: 'Erro no cadastro', detalhe: err });
+    if (err) {
+        console.error('Erro no cadastro:', err);
+        return res.status(500).json({ erro: 'Erro no cadastro', detalhe: err.message });
+}
+
         res.json({ mensagem: 'Usuário cadastrado com sucesso!' });
     });
 });
