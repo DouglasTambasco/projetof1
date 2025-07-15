@@ -1,20 +1,20 @@
 function clickMenu() {
-    if (menu.style.display === "block") {
-        menu.style.display = "none"
-    } else {
-        menu.style.display = "block"
-    }
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
 }
 
 function mudouTamanho() {
-    if (window.innerWidth >= 768) {
-        menu.style.display = "block"
-    } else {
-        menu.style.display = "none"
-    }
+  if (window.innerWidth >= 768) {
+    menu.style.display = "block";
+  } else {
+    menu.style.display = "none";
+  }
 }
 
-// Função para cadastro
+// === Cadastro ===
 const formCadastro = document.getElementById('form-cadastro');
 
 if (formCadastro) {
@@ -42,7 +42,7 @@ if (formCadastro) {
   });
 }
 
-// Função para login
+// === Login ===
 const formLogin = document.getElementById('form-login');
 
 if (formLogin) {
@@ -62,9 +62,10 @@ if (formLogin) {
       const data = await res.json();
 
       if (data.mensagem) {
+        localStorage.setItem('usuario', data.usuario);
+        localStorage.setItem('nome_completo', data.nome_completo);
         alert('Login bem-sucedido!');
-        // Se quiser, redirecione para outra página:
-        // window.location.href = 'dashboard.html';
+        window.location.href = 'index.html';
       } else {
         alert(data.erro || 'Erro no login');
       }
@@ -73,4 +74,27 @@ if (formLogin) {
       console.error(error);
     }
   });
+}
+
+// === Saudação no header ===
+const saudacao = document.getElementById('saudacao');
+const nomeUsuario = localStorage.getItem('nome_completo');
+
+if (saudacao && nomeUsuario) {
+  saudacao.textContent = `Bem-vindo(a), ${nomeUsuario}`;
+}
+
+// === Proteção de páginas restritas ===
+const paginaProtegida = document.body.getAttribute('data-restrito');
+
+if (paginaProtegida === 'sim') {
+  if (!nomeUsuario) {
+    alert('Você precisa estar logado para acessar esta página.');
+    window.location.href = 'login.html';
+  }
+}
+
+function logout() {
+  localStorage.clear();
+  window.location.href = 'index.html';
 }

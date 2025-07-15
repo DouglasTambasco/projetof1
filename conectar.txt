@@ -1,0 +1,3 @@
+cd C:\Users\Douglas\Documents\ESTUDO\PROJETOS\vsc\html-css\projetof1\backend
+
+node index.js

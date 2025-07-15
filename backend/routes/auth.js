@@ -34,7 +34,11 @@ router.post('/login', (req, res) => {
 
         if (!senhaValida) return res.status(401).json({ erro: 'Senha incorreta' });
 
-        res.json({ mensagem: 'Login bem-sucedido', usuario: usuarioDB.usuario });
+        res.json({
+            mensagem: 'Login bem-sucedido',
+            usuario: usuarioDB.usuario,
+            nome_completo: usuarioDB.nome_completo
+        });
     });
 });
 
