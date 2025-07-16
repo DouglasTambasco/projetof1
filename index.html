@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>F1 2025 | Início</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu"/>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
     <link rel="stylesheet" href="estilo/style.css">
     <link rel="stylesheet" href="estilo/medias.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -12,11 +14,12 @@
 
 <body onresize="mudouTamanho()">
     <header>
-        <p id="saudacao"></p>
-        <button onclick="logout()">Sair</button>
-
+        <div id="user-info">
+            <span id="saudacao"></span>
+            <button id="cadbutt" onclick="logout()" style="display: none;">Sair</button>
+        </div>
         <a href="index.html">
-        <img src="img/f11.png" alt="Descrição da imagem">
+            <img src="img/f11.png" alt="Descrição da imagem">
         </a>
         <p>Seu portal atualizado do mundo da Fórmula 1.</p>
         <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
@@ -32,58 +35,71 @@
     <main>
         <section>
             <h2>Bem-vindo(a), cabeça de gasolina...</h2>
-            <p>Aqui, seu amor pela <a href="https://www.formula1.com/" target="_blank"> Fórmula 1</a> segue sempre na liderança! Acompanhe as últimas notícias, resultados e muito mais!</p>
+            <p>Aqui, seu amor pela <a href="https://www.formula1.com/" target="_blank"> Fórmula 1</a> segue sempre na
+                liderança! Acompanhe as últimas notícias, resultados e muito mais!</p>
 
             <h2>Cadastre e/ou Logue no nosso site!</h2>
-            <p><a href="cad.html"> Cadastre-se</a> para receber atualizações do mundo da Fórmula 1. Caso já seja cadastrado, <a href="login.html"> faça login</a> e acompanhe todo o nosso conteúdo!</p>
+            <p><a href="cad.html"> Cadastre-se</a> para receber atualizações do mundo da Fórmula 1. Caso já seja
+                cadastrado, <a href="login.html"> faça login</a> e acompanhe todo o nosso conteúdo!</p>
         </section>
 
         <section>
             <div id="destaque">
-            <h2 id="h2-destaque">Último Grande Prêmio</h2>
-            <article>
-                <h3>GP da Arábia Saudita:</h3>
-                <p>Assim ficou o top 10 do GP de Jeddah:</p>
-                <picture>
-                    <source media="(max-width: 400px)" srcset="img/podio-pq.jpeg">
-                    <img src="img/ara25.jpeg" alt="podio-bahrein">
-                </picture>
+                <h2 id="h2-destaque">Último Grande Prêmio</h2>
+                <article>
+                    <h3>GP da Arábia Saudita:</h3>
+                    <p>Assim ficou o top 10 do GP de Jeddah:</p>
+                    <picture>
+                        <source media="(max-width: 400px)" srcset="img/podio-pq.jpeg">
+                        <img src="img/ara25.jpeg" alt="podio-bahrein">
+                    </picture>
 
-                <p>Confira os <a href="https://youtu.be/Li93iQDZQeg?feature=shared" target="_blank">melhores momentos (YouTube F1 Oficial)</a> da corrida.</p>
+                    <p>Confira os <a href="https://youtu.be/Li93iQDZQeg?feature=shared" target="_blank">melhores
+                            momentos (YouTube F1 Oficial)</a> da corrida.</p>
 
-                <p>Aqui, um comparativo interessante das voltas das poles de Max Verstappen em Jeddah no ano passado e desse ano: </p>
-                <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/IPr46c71GoE?si=VFfiR49jhMFgIWIG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                    <p>Aqui, um comparativo interessante das voltas das poles de Max Verstappen em Jeddah no ano passado
+                        e desse ano: </p>
+                    <div class="video"><iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/IPr46c71GoE?si=VFfiR49jhMFgIWIG"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
             </div>
             </article>
             <br>
             <section>
                 <div id="destaque">
-                <h2 id="h2-destaque">NOVO LÍDER</h2>
-                <article>
+                    <h2 id="h2-destaque">NOVO LÍDER</h2>
+                    <article>
 
-                    <p>Com esse resultado, temos um novo líder no campeonato de <a href="classificacao.html">pilotos</a>. Ele que nunca havia liderado o campeonato da Fórmula 1 antes, sai de Jeddah com 10 pontos na frente do seu companheiro de equipe, Lando Norris. Com isso, a McLaren sai mais lider do que nunca do mundial de <a href="classificacao.html"> construtores</a>.</p>
+                        <p>Com esse resultado, temos um novo líder no campeonato de <a
+                                href="classificacao.html">pilotos</a>. Ele que nunca havia liderado o campeonato da
+                            Fórmula 1 antes, sai de Jeddah com 10 pontos na frente do seu companheiro de equipe, Lando
+                            Norris. Com isso, a McLaren sai mais lider do que nunca do mundial de <a
+                                href="classificacao.html"> construtores</a>.</p>
 
-                    <picture>
-                        <source media="(max-width: 400px)" srcset="img/podio-pq.jpeg">
-                        <img src="img/piastri.jpeg" alt="oscar-piastri">
-                    </picture>
+                        <picture>
+                            <source media="(max-width: 400px)" srcset="img/podio-pq.jpeg">
+                            <img src="img/piastri.jpeg" alt="oscar-piastri">
+                        </picture>
 
                 </div>
                 </article>
 
-            <article>
-                <h2>A GM/Cadillac vem aí...</h2>
-                <p>A equipe X anunciou a contratação de um novo piloto para a próxima temporada.</p>
-            </article>
-        </section>
+                <article>
+                    <h2>A GM/Cadillac vem aí...</h2>
+                    <p>A equipe X anunciou a contratação de um novo piloto para a próxima temporada.</p>
+                </article>
+            </section>
     </main>
-    
-        <footer>
-            <p>Feito por <a href="https://github.com/DouglasTambasco" target="_blank">Douglas Tambasco</a> &copy;</p>
-            <p>2025</p>
-        </footer>
+
+    <footer>
+        <p>Feito por <a href="https://github.com/DouglasTambasco" target="_blank">Douglas Tambasco</a> &copy;</p>
+        <p>2025</p>
+    </footer>
 
     <script src="script.js"></script>
 
 </body>
+
 </html>

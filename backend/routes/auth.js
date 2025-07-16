@@ -43,3 +43,30 @@ router.post('/login', (req, res) => {
 });
 
 module.exports = router;
+
+// Rota para redefinir senha
+router.post('/reset-password', (req, res) => {
+    const { email, novaSenha } = req.body;
+
+    if (!email || !novaSenha) {
+        return res.status(400).json({ erro: 'E-mail e nova senha são obrigatórios' });
+    }
+
+    // Criptografa a nova senha
+    const novaSenhaCriptografada = bcrypt.hashSync(novaSenha, 8);
+
+    // Atualiza a senha no banco
+    const sql = 'UPDATE usuarios SET senha = ? WHERE email = ?';
+    db.query(sql, [novaSenhaCriptografada, email], (err, result) => {
+        if (err) {
+            console.error('Erro ao redefinir senha:', err);
+            return res.status(500).json({ erro: 'Erro interno ao redefinir senha' });
+        }
+
+        if (result.affectedRows === 0) {
+            return res.status(404).json({ erro: 'E-mail não encontrado' });
+        }
+
+        res.json({ mensagem: 'Senha redefinida com sucesso!' });
+    });
+});

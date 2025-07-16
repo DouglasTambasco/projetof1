@@ -1,16 +1,19 @@
+// app.js
 const express = require('express');
 const cors = require('cors');
+const authRoutes = require('./backend/routes/auth'); 
 
 const app = express();
-const PORT = 3000;
 
+// Middlewares
 app.use(cors());
 app.use(express.json());
 
-// Importa rotas de autenticação
-const authRoutes = require('./routes/auth');
+// Rotas
 app.use('/auth', authRoutes);
 
+// Iniciar servidor
+const PORT = 3000;
 app.listen(PORT, () => {
-    console.log(`Servidor rodando em http://localhost:${PORT}`);
+  console.log(`Servidor rodando em http://localhost:${PORT}`);
 });

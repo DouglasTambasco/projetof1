@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu"/>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
     <link rel="stylesheet" href="estilo/style.css">
     <link rel="stylesheet" href="estilo/medias.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -12,8 +14,12 @@
 
 <body onresize="mudouTamanho()">
     <header>
+        <div id="user-info">
+            <span id="saudacao"></span>
+            <button id="cadbutt" onclick="logout()" style="display: none;">Sair</button>
+        </div>
         <a href="index.html">
-        <img src="img/f11.png" alt="Descrição da imagem">
+            <img src="img/f11.png" alt="Descrição da imagem">
         </a>
         <p>Seu portal atualizado do mundo da Fórmula 1.</p>
         <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
@@ -33,33 +39,39 @@
                     <legend>Faça seu Login:</legend>
                     <form id="form-login">
                         <div class="campo">
-                            <input type="text" id="iusuario" name="usuario" required autocomplete="nickname" placeholder=" ">
+                            <input type="text" id="iusuario" name="usuario" required autocomplete="nickname"
+                                placeholder=" ">
                             <label for="iusuario">Usuário:</label>
                         </div>
                         <div class="campo">
                             <input type="password" id="isenha" name="senha" required minlength="6" maxlength="12" autocomplete="password" placeholder=" ">
                             <label for="isenha">Senha:</label>
+
+                            <!-- Ícone de mostrar/ocultar senha -->
+                            <span id="toggleSenha" class="toggle-senha">👁️</span>
                         </div>
-                            <p>
+
+                        <p>
                             <button id="cadbutt" type="submit">Entrar</button>
                             <button id="cadbutt"><a href="esqueci.html">Esqueci minha senha</a></button>
-                            </p>
-                            <p>
+                        </p>
+                        <p>
                             <button id="cadbutt"><a href="cad.html">Cadastrar</a></button>
-                            </p>
+                        </p>
                     </form>
                 </fieldset>
             </div>
         </section>
     </main>
 
-<br>
-<footer>
-    <p>Feito por <a href="https://github.com/DouglasTambasco" target="_blank">Douglas Tambasco</a> &copy;</p>
-    <p>2025</p>
-</footer>
+    <br>
+    <footer>
+        <p>Feito por <a href="https://github.com/DouglasTambasco" target="_blank">Douglas Tambasco</a> &copy;</p>
+        <p>2025</p>
+    </footer>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
